@@ -34,13 +34,15 @@ void MainWindow::on_On_clicked() {
       "enable_rgbd:=true "
       "enable_sync:=true "
       "color_qos:=SENSOR_DATA "
-      "depth_qos:=SENSOR_DATA; exec bash'");
+      "depth_qos:=SENSOR_DATA"
+      "; exec bash'");
   std::this_thread::sleep_for(std::chrono::seconds(3));
 
-  // 2. YOLO 실행 (yolo12_bbox_coordinate)
+  // 2. YOLO 실행
   system(
       "gnome-terminal --geometry=80x18+800+0 -- bash -c '"
-      "ros2 run yolo12_bbox_coordinate yolo_XYZ_pub_comp; exec bash'");
+      "ros2 run yolo12_bbox_coordinate yolo_XYZ_pub_comp"
+      "; exec bash'");
   std::this_thread::sleep_for(std::chrono::seconds(2));
 
   // 3. FoundationPose 실행
@@ -51,7 +53,8 @@ void MainWindow::on_On_clicked() {
       "export PYTHONNOUSERSITE=True && "
       "export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 && "
       "cd ~/FoundationPoseROS2 && "
-      "python foundationpose_ros_multi.py; exec bash'");
+      "python foundationpose_ros_multi.py"
+      "; exec bash'");
   std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
