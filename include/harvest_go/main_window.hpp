@@ -1,7 +1,7 @@
 /**
  * @file /include/harvest_go/main_window.hpp
  *
- * @brief Qt based gui for %(package)s.
+ * @brief Qt based gui for integrated Vision & Manipulator System.
  *
  * @date January 2025
  **/
@@ -14,16 +14,16 @@
 *****************************************************************************/
 
 #include <QMainWindow>
+#include <chrono>
+#include <thread>
 
 #include "QIcon"
 #include "ui_mainwindow.h"
-#include <chrono>
-#include <thread>
 /*****************************************************************************
 ** Interface [MainWindow]
 *****************************************************************************/
 /**
- * @brief Qt central, all operations relating to the view part here.
+ * @brief Qt central, all operations relating to the integrated system view part here.
  */
 class MainWindow : public QMainWindow {
   Q_OBJECT
@@ -37,8 +37,27 @@ class MainWindow : public QMainWindow {
   void closeEvent(QCloseEvent* event);
 
  public Q_SLOTS:
-  void on_On_clicked();
-  void on_Off_clicked();
+  // 전체 시스템
+  void on_System_All_On_clicked();
+  void on_System_All_Off_clicked();
+
+  // 비전 시스템
+  void on_Vision_All_On_clicked();
+  void on_Vision_All_Off_clicked();
+  void on_RealSense_clicked();
+  void on_Calibration_clicked();
+  void on_YOLO_clicked();
+  void on_FoundationPose_clicked();
+  void on_TSP_clicked();
+
+  // 매니퓰레이터 시스템
+  void on_Mani_All_On_clicked();
+  void on_Mani_All_Off_clicked();
+  void on_Motor_clicked();
+  void on_Map_clicked();
+  void on_Path_clicked();
+  void on_Inverse_Sim_clicked();
+  void on_Real_Inverse_clicked();
 };
 
 #endif  // harvest_go_MAIN_WINDOW_H
