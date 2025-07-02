@@ -99,6 +99,8 @@ void MainWindow::on_Mani_All_On_clicked() {
   std::this_thread::sleep_for(std::chrono::seconds(1));
   on_Inverse_Sim_clicked();
   std::this_thread::sleep_for(std::chrono::seconds(1));
+  on_Gripper_clicked();
+  std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 
 void MainWindow::on_Mani_All_Off_clicked() { system("pkill -f 'sad_pkg'"); }
@@ -133,13 +135,42 @@ void MainWindow::on_Real_Inverse_clicked() {
       "ros2 run sad_pkg real_inverse_node; exec bash'");
 }
 
+void MainWindow::on_Gripper_clicked() {
+  system(
+      "gnome-terminal --geometry=65x12+800+1050 -- bash -c '"
+      "ros2 run sad_pkg gripper_node; exec bash'");
+}
+
+// ========== 시뮬레이션 & 시각화 (매니퓰레이터 시스템 내) ==========
+void MainWindow::on_Gazebo_Launch_clicked() {
+  system(
+      "gnome-terminal --geometry=80x15+1600+50 -- bash -c '"
+      "ros2 launch sad_pkg sad.launch.py; exec bash'");
+}
+
+void MainWindow::on_RViz_clicked() {
+  system(
+      "gnome-terminal --geometry=80x15+1600+300 -- bash -c '"
+      "rviz2; exec bash'");
+}
+
+void MainWindow::on_SAD_Calibration_clicked() {
+  system(
+      "gnome-terminal --geometry=80x15+1600+550 -- bash -c '"
+      "ros2 run sad_pkg calibration_node; exec bash'");
+}
+
 // ========== 전체 시스템 ==========
 void MainWindow::on_System_All_On_clicked() {
   on_Vision_All_On_clicked();
   on_Mani_All_On_clicked();
+  // 시뮬레이션 도구들은 필요에 따라 수동으로 실행
 }
 
 void MainWindow::on_System_All_Off_clicked() {
   on_Vision_All_Off_clicked();
   on_Mani_All_Off_clicked();
+  // 시뮬레이션 도구들도 종료
+  system("pkill -f 'gazebo'");
+  system("pkill -f 'rviz2'");
 }
