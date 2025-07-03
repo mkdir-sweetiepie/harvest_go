@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>860</height>
+    <height>802</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -556,39 +556,11 @@
      <string>Real Inverse Node</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Gripper">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>620</y>
-      <width>330</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-                        font: 12pt &quot;Ubuntu&quot;;
-                        background-color: #6c757d;
-                        color: white;
-                        border-radius: 10px;
-                        border: none;
-                        padding: 8px;
-                        text-align: left;
-                        padding-left: 15px;
-                        }
-                        QPushButton:hover {
-                        background-color: #7c858d;
-                        }</string>
-    </property>
-    <property name="text">
-     <string>Gripper Node (Simulation)</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Gazebo_Launch">
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>740</y>
+      <y>680</y>
       <width>330</width>
       <height>50</height>
      </rect>
@@ -616,7 +588,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>800</y>
+      <y>740</y>
       <width>330</width>
       <height>50</height>
      </rect>
@@ -644,7 +616,7 @@
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>680</y>
+      <y>620</y>
       <width>330</width>
       <height>50</height>
      </rect>
