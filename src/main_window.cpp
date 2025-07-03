@@ -90,7 +90,6 @@ void MainWindow::on_TSP_clicked() {
 
 // ========== 매니퓰레이터 시스템 ==========
 void MainWindow::on_Mani_All_On_clicked() {
-  // Motor 노드 먼저 실행 (항상 첫번째)
   on_Motor_clicked();
   std::this_thread::sleep_for(std::chrono::seconds(2));
   on_Map_clicked();
@@ -99,7 +98,9 @@ void MainWindow::on_Mani_All_On_clicked() {
   std::this_thread::sleep_for(std::chrono::seconds(1));
   on_Inverse_Sim_clicked();
   std::this_thread::sleep_for(std::chrono::seconds(1));
-  on_Gripper_clicked();
+  on_Real_Inverse_clicked();
+  std::this_thread::sleep_for(std::chrono::seconds(1));
+  on_SAD_Calibration_clicked();
   std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 
@@ -135,11 +136,12 @@ void MainWindow::on_Real_Inverse_clicked() {
       "ros2 run sad_pkg real_inverse_node; exec bash'");
 }
 
-void MainWindow::on_Gripper_clicked() {
+void MainWindow::on_SAD_Calibration_clicked() {
   system(
-      "gnome-terminal --geometry=65x12+800+1050 -- bash -c '"
-      "ros2 run sad_pkg gripper_node; exec bash'");
+      "gnome-terminal --geometry=80x15+1600+550 -- bash -c '"
+      "ros2 run sad_pkg calibration_node; exec bash'");
 }
+
 
 // ========== 시뮬레이션 & 시각화 (매니퓰레이터 시스템 내) ==========
 void MainWindow::on_Gazebo_Launch_clicked() {
@@ -154,11 +156,6 @@ void MainWindow::on_RViz_clicked() {
       "rviz2; exec bash'");
 }
 
-void MainWindow::on_SAD_Calibration_clicked() {
-  system(
-      "gnome-terminal --geometry=80x15+1600+550 -- bash -c '"
-      "ros2 run sad_pkg calibration_node; exec bash'");
-}
 
 // ========== 전체 시스템 ==========
 void MainWindow::on_System_All_On_clicked() {
