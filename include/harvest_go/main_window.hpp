@@ -55,7 +55,6 @@ class MainWindow : public QMainWindow {
   void on_Path_clicked();
   void on_Inverse_Sim_clicked();
   void on_Real_Inverse_clicked();
-  void on_Gripper_clicked();
   void on_Gazebo_Launch_clicked();
   void on_RViz_clicked();
   void on_SAD_Calibration_clicked();
