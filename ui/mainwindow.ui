@@ -1,71 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-  <class>MainWindowDesign</class>
-  <widget class="QMainWindow" name="MainWindowDesign">
+ <class>MainWindowDesign</class>
+ <widget class="QMainWindow" name="MainWindowDesign">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>856</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Vision &amp; Manipulator Control System</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/images.qrc">
+    <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="Australia"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="system_title">
     <property name="geometry">
-      <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>720</width>
-        <height>856</height>
-      </rect>
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>680</width>
+      <height>60</height>
+     </rect>
     </property>
-    <property name="windowTitle">
-      <string>Vision &amp; Manipulator Control System</string>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
-    <property name="windowIcon">
-      <iconset resource="../resources/images.qrc">
-        <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
-    </property>
-    <property name="locale">
-      <locale language="English" country="Australia" />
-    </property>
-    <widget class="QWidget" name="centralwidget">
-      <widget class="QLabel" name="system_title">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>20</y>
-            <width>680</width>
-            <height>60</height>
-          </rect>
-        </property>
-        <property name="font">
-          <font>
-            <pointsize>22</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-          </font>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QLabel {
+    <property name="styleSheet">
+     <string notr="true">QLabel {
             background-color: #495057;
             color: white;
             border-radius: 15px;
             padding: 15px;
             }</string>
-        </property>
-        <property name="text">
-          <string>INTEGRATED CONTROL SYSTEM</string>
-        </property>
-        <property name="alignment">
-          <set>Qt::AlignCenter</set>
-        </property>
-      </widget>
-
-      <!-- 전체 시스템 제어 버튼 -->
-      <widget class="QPushButton" name="System_All_On">
-        <property name="geometry">
-          <rect>
-            <x>70</x>
-            <y>100</y>
-            <width>270</width>
-            <height>65</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: bold 16pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>INTEGRATED CONTROL SYSTEM</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="System_All_On">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>100</y>
+      <width>270</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: bold 16pt &quot;Ubuntu&quot;;
             background-color: #28a745;
             color: white;
             border-radius: 15px;
@@ -78,24 +76,23 @@
             QPushButton:pressed {
             background-color: #1e7e34;
             }</string>
-        </property>
-        <property name="text">
-          <string>START ALL SYSTEMS</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="System_All_Off">
-        <property name="geometry">
-          <rect>
-            <x>380</x>
-            <y>100</y>
-            <width>270</width>
-            <height>65</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: bold 16pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>START ALL SYSTEMS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="System_All_Off">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>100</y>
+      <width>270</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: bold 16pt &quot;Ubuntu&quot;;
             background-color: #dc3545;
             color: white;
             border-radius: 15px;
@@ -108,57 +105,54 @@
             QPushButton:pressed {
             background-color: #bd2130;
             }</string>
-        </property>
-        <property name="text">
-          <string>STOP ALL SYSTEMS</string>
-        </property>
-      </widget>
-
-      <!-- 비전 시스템 섹션 -->
-      <widget class="QLabel" name="vision_title">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>190</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="font">
-          <font>
-            <pointsize>18</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-          </font>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QLabel {
+    </property>
+    <property name="text">
+     <string>STOP ALL SYSTEMS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vision_title">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
             background-color: #007bff;
             color: white;
             border-radius: 12px;
             padding: 12px;
             }</string>
-        </property>
-        <property name="text">
-          <string>VISION SYSTEM</string>
-        </property>
-        <property name="alignment">
-          <set>Qt::AlignCenter</set>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Vision_All_On">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>250</y>
-            <width>160</width>
-            <height>55</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: bold 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>VISION SYSTEM</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Vision_All_On">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>160</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: bold 12pt &quot;Ubuntu&quot;;
             background-color: #28a745;
             color: white;
             border-radius: 12px;
@@ -168,24 +162,23 @@
             QPushButton:hover {
             background-color: #34ce57;
             }</string>
-        </property>
-        <property name="text">
-          <string>Start All</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Vision_All_Off">
-        <property name="geometry">
-          <rect>
-            <x>190</x>
-            <y>250</y>
-            <width>160</width>
-            <height>55</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: bold 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Start All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Vision_All_Off">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>250</y>
+      <width>160</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: bold 12pt &quot;Ubuntu&quot;;
             background-color: #dc3545;
             color: white;
             border-radius: 12px;
@@ -195,25 +188,23 @@
             QPushButton:hover {
             background-color: #e85563;
             }</string>
-        </property>
-        <property name="text">
-          <string>Stop All</string>
-        </property>
-      </widget>
-
-      <!-- 비전 시스템 개별 버튼들 -->
-      <widget class="QPushButton" name="RealSense">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>320</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Stop All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RealSense">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -225,24 +216,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>RealSense Camera</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Calibration">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>380</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>RealSense Camera</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Calibration">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -254,24 +244,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>Calibration Node</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="YOLO">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>440</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Calibration Node</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="YOLO">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -283,24 +272,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>YOLO Detection</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="FoundationPose">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>500</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>YOLO Detection</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="FoundationPose">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -312,24 +300,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>FoundationPose</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="TSP">
-        <property name="geometry">
-          <rect>
-            <x>20</x>
-            <y>560</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>FoundationPose</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TSP">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>560</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -341,57 +328,54 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>TSP Planning</string>
-        </property>
-      </widget>
-
-      <!-- 매니퓰레이터 시스템 섹션 -->
-      <widget class="QLabel" name="mani_title">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>190</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="font">
-          <font>
-            <pointsize>18</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-          </font>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QLabel {
+    </property>
+    <property name="text">
+     <string>TSP Planning</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mani_title">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>190</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
             background-color: #6f42c1;
             color: white;
             border-radius: 12px;
             padding: 12px;
             }</string>
-        </property>
-        <property name="text">
-          <string>MANIPULATOR SYSTEM</string>
-        </property>
-        <property name="alignment">
-          <set>Qt::AlignCenter</set>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Mani_All_On">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>250</y>
-            <width>160</width>
-            <height>55</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: bold 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>MANIPULATOR SYSTEM</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Mani_All_On">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>250</y>
+      <width>160</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: bold 12pt &quot;Ubuntu&quot;;
             background-color: #28a745;
             color: white;
             border-radius: 12px;
@@ -401,24 +385,23 @@
             QPushButton:hover {
             background-color: #34ce57;
             }</string>
-        </property>
-        <property name="text">
-          <string>Start All</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Mani_All_Off">
-        <property name="geometry">
-          <rect>
-            <x>540</x>
-            <y>250</y>
-            <width>160</width>
-            <height>55</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: bold 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Start All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Mani_All_Off">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>250</y>
+      <width>160</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: bold 12pt &quot;Ubuntu&quot;;
             background-color: #dc3545;
             color: white;
             border-radius: 12px;
@@ -428,25 +411,23 @@
             QPushButton:hover {
             background-color: #e85563;
             }</string>
-        </property>
-        <property name="text">
-          <string>Stop All</string>
-        </property>
-      </widget>
-
-      <!-- 매니퓰레이터 시스템 개별 버튼들 -->
-      <widget class="QPushButton" name="Motor">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>320</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Stop All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Motor">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>320</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -458,24 +439,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>Motor Node</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Map">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>380</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Motor Node</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Map">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>380</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -487,24 +467,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>Map Node (Simulation)</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Path">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>440</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Map Node (Simulation)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Path">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>440</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -516,24 +495,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>Path Node</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Inverse_Sim">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>500</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Path Node</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Inverse_Sim">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>500</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -545,24 +523,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>Inverse Node (Simulation)</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="Real_Inverse">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>560</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Inverse Node (Simulation)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Real_Inverse">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>620</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -574,24 +551,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>Real Inverse Node</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="SAD_Calibration">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>620</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Real Inverse Node</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SAD_Calibration">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>560</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #6c757d;
             color: white;
             border-radius: 10px;
@@ -603,25 +579,23 @@
             QPushButton:hover {
             background-color: #7c858d;
             }</string>
-        </property>
-        <property name="text">
-          <string>SAD Calibration</string>
-        </property>
-      </widget>
-
-      <!-- 시뮬레이션 & 시각화 버튼들 -->
-      <widget class="QPushButton" name="Gazebo_Launch">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>680</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Calibration</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Gazebo_Launch">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>680</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #17a2b8;
             color: white;
             border-radius: 10px;
@@ -633,24 +607,23 @@
             QPushButton:hover {
             background-color: #20c0db;
             }</string>
-        </property>
-        <property name="text">
-          <string>Gazebo Simulation</string>
-        </property>
-      </widget>
-
-      <widget class="QPushButton" name="RViz">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>740</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>Gazebo Simulation</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RViz">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>740</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #17a2b8;
             color: white;
             border-radius: 10px;
@@ -662,25 +635,23 @@
             QPushButton:hover {
             background-color: #20c0db;
             }</string>
-        </property>
-        <property name="text">
-          <string>RViz2 Visualization</string>
-        </property>
-      </widget>
-
-      <!-- 중복된 RViz 버튼 (제거 권장) -->
-      <widget class="QPushButton" name="RViz_2">
-        <property name="geometry">
-          <rect>
-            <x>370</x>
-            <y>800</y>
-            <width>330</width>
-            <height>50</height>
-          </rect>
-        </property>
-        <property name="styleSheet">
-          <string notr="true">QPushButton {
-            font: 12pt "Ubuntu";
+    </property>
+    <property name="text">
+     <string>RViz2 Visualization</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="launch">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>800</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+            font: 12pt &quot;Ubuntu&quot;;
             background-color: #1232b8;
             color: white;
             border-radius: 10px;
@@ -692,49 +663,43 @@
             QPushButton:hover {
             background-color: #20c0db;
             }</string>
-        </property>
-        <property name="text">
-          <string>RViz2 Visualization</string>
-        </property>
-      </widget>
-    </widget>
-
-    <!-- 메뉴 액션 -->
-    <action name="action_Quit">
-      <property name="text">
-        <string>&amp;Quit</string>
-      </property>
-      <property name="shortcut">
-        <string>Ctrl+Q</string>
-      </property>
-      <property name="shortcutContext">
-        <enum>Qt::ApplicationShortcut</enum>
-      </property>
-    </action>
+    </property>
+    <property name="text">
+     <string>Simulation Launch</string>
+    </property>
+   </widget>
   </widget>
-
-  <!-- 리소스 파일 -->
-  <resources>
-    <include location="../resources/images.qrc" />
-  </resources>
-
-  <!-- 시그널-슬롯 연결 -->
-  <connections>
-    <connection>
-      <sender>action_Quit</sender>
-      <signal>triggered()</signal>
-      <receiver>MainWindowDesign</receiver>
-      <slot>close()</slot>
-      <hints>
-        <hint type="sourcelabel">
-          <x>-1</x>
-          <y>-1</y>
-        </hint>
-        <hint type="destinationlabel">
-          <x>360</x>
-          <y>410</y>
-        </hint>
-      </hints>
-    </connection>
-  </connections>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindowDesign</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>410</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
