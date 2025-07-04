@@ -104,7 +104,15 @@ void MainWindow::on_Mani_All_On_clicked() {
   std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 
-void MainWindow::on_Mani_All_Off_clicked() { system("pkill -f 'sad_pkg'"); }
+void MainWindow::on_Mani_All_Off_clicked() {
+  // sad_pkg 관련 모든 노드들 종료
+  system("pkill -f 'sad_pkg'");
+  // launch 파일들 종료
+  system("pkill -f 'all.launch.py'");
+  system("pkill -f 'sad.launch.py'");
+  // ros2 launch 프로세스들 종료
+  system("pkill -f 'ros2 launch.*sad_pkg'");
+}
 
 void MainWindow::on_Motor_clicked() {
   system(
@@ -142,6 +150,11 @@ void MainWindow::on_SAD_Calibration_clicked() {
       "ros2 run sad_pkg calibration_node; exec bash'");
 }
 
+void MainWindow::on_launch_clicked() {
+  system(
+      "gnome-terminal --geometry=80x15+1600+50 -- bash -c '"
+      "ros2 launch sad_pkg all.launch.py; exec bash'");
+}
 
 // ========== 시뮬레이션 & 시각화 (매니퓰레이터 시스템 내) ==========
 void MainWindow::on_Gazebo_Launch_clicked() {
@@ -156,7 +169,6 @@ void MainWindow::on_RViz_clicked() {
       "rviz2; exec bash'");
 }
 
-
 // ========== 전체 시스템 ==========
 void MainWindow::on_System_All_On_clicked() {
   on_Vision_All_On_clicked();
@@ -170,4 +182,7 @@ void MainWindow::on_System_All_Off_clicked() {
   // 시뮬레이션 도구들도 종료
   system("pkill -f 'gazebo'");
   system("pkill -f 'rviz2'");
+  // realsense launch 파일도 종료
+  system("pkill -f 'rs_launch.py'");
+  system("pkill -f 'ros2 launch.*realsense2_camera'");
 }

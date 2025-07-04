@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>802</height>
+    <height>856</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -638,6 +638,34 @@
     </property>
     <property name="text">
      <string>SAD Calibration</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RViz_2">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>800</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+                        font: 12pt &quot;Ubuntu&quot;;
+                        background-color: #1232b8;
+                        color: white;
+                        border-radius: 10px;
+                        border: none;
+                        padding: 8px;
+                        text-align: left;
+                        padding-left: 15px;
+                        }
+                        QPushButton:hover {
+                        background-color: #20c0db;
+                        }</string>
+    </property>
+    <property name="text">
+     <string>RViz2 Visualization</string>
     </property>
    </widget>
   </widget>

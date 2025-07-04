@@ -23,9 +23,7 @@
 /*****************************************************************************
 ** Interface [MainWindow]
 *****************************************************************************/
-/**
- * @brief Qt central, all operations relating to the view part here.
- */
+
 class MainWindow : public QMainWindow {
   Q_OBJECT
 
@@ -55,9 +53,12 @@ class MainWindow : public QMainWindow {
   void on_Path_clicked();
   void on_Inverse_Sim_clicked();
   void on_Real_Inverse_clicked();
+  void on_SAD_Calibration_clicked();
+  void on_launch_clicked();
+
+  // ========== 시뮬레이션 & 시각화 ==========
   void on_Gazebo_Launch_clicked();
   void on_RViz_clicked();
-  void on_SAD_Calibration_clicked();
 
   // ========== 전체 시스템 ==========
   void on_System_All_On_clicked();
